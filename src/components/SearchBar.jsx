@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Paper, IconButton } from "@mui/material"
-import { Search, SearchIcon } from "@mui/icons-material"
+import { Search } from "@mui/icons-material"
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("")
@@ -40,7 +40,7 @@ const SearchBar = () => {
         className='search-bar'
         placeholder='Search...'
         value={searchTerm} // Bind the input value to the state
-        onChange={handleInputChange}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
       <IconButton type='submit' sx={{ p: "10px", color: "red" }}>
         <Search />

@@ -5,9 +5,6 @@ import { VideoCard, ChannelCard } from "./index"
 
 const Videos = ({ videos, direction }) => {
   if (!videos?.length) return "Loading...."
-  if (!videos || !Array.isArray(videos)) {
-    return null // Return null or a loading indicator, or some other fallback UI
-  }
 
   return (
     <Stack
